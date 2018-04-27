@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="384px"
+	 height="384px" viewBox="0 0 384 384" enable-background="new 0 0 384 384" xml:space="preserve">
+<g id="box-top-object">
+	<polygon fill="#509383" stroke="#4F8E7E" stroke-miterlimit="10" points="143,62.333 222.667,170.667 314.667,170.667 
+		239.667,81.333 	"/>
+</g>
+<g id="box-left-object">
+	<polygon fill="#2A4B44" stroke="#2A4B44" stroke-miterlimit="10" points="218,172.667 137.667,65.333 73,172.667 137,281 	"/>
+</g>
+<g id="box-right-object">
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="223,175.333 314.667,175.333 241,267.667 143,285 	"/>
+</g>
+<g id="circle-object">
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="250,41.833 286.667,41.833 299.667,52.667 
+		269.834,52.667 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="288.334,65.333 313,65.333 321.667,76.667 
+		298.667,76.667 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="309.834,90.167 331.167,90.167 336.834,100.5 
+		317.167,100.5 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="324.667,115.333 343.5,115.333 347.334,126 329.5,126 	
+		"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="333.834,139.667 351.5,139.667 353.667,150 336.834,150 	
+		"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="355.167,163.665 338.167,163.665 339.334,174.332 
+		355.834,174.332 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="336,212.831 352.5,212.831 349.834,222.831 
+		333.167,222.831 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="355.167,199.497 338.167,199.497 339.334,188.664 
+		355.834,188.664 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="345.834,236.831 328.167,236.831 323.667,247.497 
+		341.5,247.497 	"/>
+	<path fill="#467869" stroke="#457466" stroke-miterlimit="10" d="M264,309.997c0,0-66.834,47.166-144.667,0h-29
+		c0,0,91.333,82.166,203.5,0H264z"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="65.501,286.164 87.501,286.164 99.168,296.997 
+		75.168,296.997 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="75.668,272.497 55.501,272.497 49.001,261.664 
+		68.501,261.664 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="55.334,236.831 37.668,236.831 42.001,247.497 
+		60.334,247.497 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="47.668,212.831 31.168,212.831 33.501,223.664 
+		50.834,223.664 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="27.668,188.831 44.501,188.831 45.334,199.664 
+		28.501,199.664 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="32.168,139.331 49.668,139.331 47.001,149.998 
+		29.834,149.998 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="28.668,163.998 44.668,163.998 43.834,174.498 
+		27.668,174.498 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="97.334,41.831 133.001,41.831 113.168,52.831 
+		84.001,52.831 	"/>
+	<polygon fill="#467869" stroke="#457466" stroke-miterlimit="10" points="70.501,65.333 95.668,65.333 84.001,76.664 
+		61.334,76.664 	"/>
+</g>
+<g id="Layer_5">
+	
+		<text transform="matrix(1 0 0 1 10.5 119.5005)" fill="#457466" stroke="#457466" stroke-miterlimit="10" font-family="'ArialMT'" font-size="32">CUBE</text>
+	
+		<text transform="matrix(1 0 0 1 253.5 284)" fill="#447063" stroke="#447063" stroke-miterlimit="10" font-family="'ArialMT'" font-size="24">CRAWLER</text>
+</g>
+</svg>
