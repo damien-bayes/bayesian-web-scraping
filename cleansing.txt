@@ -1,0 +1,86 @@
+private static string ClearCorpus(string corpus)
+            {
+                //Damien Bayes CODE - 15.10.2014
+                corpus = RemoveJavascriptTagsFromFile(corpus);
+                corpus = RemoveHtmlTagsFromFile(corpus);
+                corpus = Regex.Replace(corpus, @"(\s*)?&nbsp;(\s*)?", " ");
+                corpus = RemoveWhitespaceFromFile(corpus);
+                return corpus;
+            }
+
+
+ #region HTML GARBAGE CLEANESE - Damien Bayes 15.10.2014
+
+            /// <summary>
+            /// RemoveJavascriptTagsFromFile function
+            /// </summary>
+            /// <param name="html">Document with HTML-tags and Javascript functions</param>
+            /// <returns>Changing result</returns>
+            static string RemoveJavascriptTagsFromFile(string html)
+            {
+                if (!string.IsNullOrEmpty(html))
+                {
+                    /*
+                     * <script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>
+                     */
+                    int originLength = html.Length;
+                    string pattern = @"<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>";
+
+                    html = Regex.Replace(html, pattern, " ");
+
+                    if (originLength > html.Length)
+                    {
+                        return html;
+                    }
+                }
+                return html;
+            }
+
+            /// <summary>
+            /// RemoveHtmlTagsFromFile function
+            /// </summary>
+            /// <param name="html">Document only with HTML-tags</param>
+            /// <returns>Changing result</returns>
+            static string RemoveHtmlTagsFromFile(string html)
+            {
+                if (!string.IsNullOrEmpty(html))
+                {
+                    /*
+                     * <[^>]+>
+                     */
+                    int originLength = html.Length;
+                    string pattern = @"<[^>]+>";
+
+                    html = Regex.Replace(html, pattern, " ");
+
+                    if (originLength > html.Length)
+                    {
+                        return html;
+                    }
+                }
+                return html;
+            }
+
+            /// <summary>
+            /// RemoveWhitespaceFromFile function
+            /// </summary>
+            /// <param name="html"></param>
+            /// <returns></returns>
+            static string RemoveWhitespaceFromFile(string html)
+            {
+                if (!string.IsNullOrEmpty(html))
+                {
+                    int originLength = html.Length;
+                    string pattern = @"\s+";
+
+                    html = Regex.Replace(html, pattern, " ");
+
+                    if (originLength > html.Length)
+                    {
+                        return html;
+                    }
+                }
+                return html;
+            }
+
+            #endregion
