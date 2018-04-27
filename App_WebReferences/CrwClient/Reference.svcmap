@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="452ef34c-d6ec-4110-9006-552fced0a62f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gggg:777/CrawlerWCF.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CrawlerWCF1.disco" MetadataType="Disco" ID="f730fd98-8ca6-4229-80a2-178add8f0810" SourceId="1" SourceUrl="http://gggg:777/CrawlerWCF.svc?disco" />
+    <MetadataFile FileName="CrawlerWCF1.xsd" MetadataType="Schema" ID="783ae518-58f4-44e1-8d14-c9f138f90927" SourceId="1" SourceUrl="http://gggg:777/CrawlerWCF.svc?xsd=xsd0" />
+    <MetadataFile FileName="CrawlerWCF1.wsdl" MetadataType="Wsdl" ID="7204ad19-10df-4a61-9ec8-971ba59d4446" SourceId="1" SourceUrl="http://gggg:777/CrawlerWCF.svc?wsdl" />
+    <MetadataFile FileName="CrawlerWCF12.xsd" MetadataType="Schema" ID="491df88f-6a69-4ed2-9a78-6f4c7aec20f9" SourceId="1" SourceUrl="http://gggg:777/CrawlerWCF.svc?xsd=xsd1" />
+    <MetadataFile FileName="CrawlerWCF13.xsd" MetadataType="Schema" ID="7ee6b6d2-bbf1-4113-aae7-74e5d0445b13" SourceId="1" SourceUrl="http://gggg:777/CrawlerWCF.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

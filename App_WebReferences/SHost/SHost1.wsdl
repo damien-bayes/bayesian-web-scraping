@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SHost" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSDualHttpBinding_ISHost_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <cdp:CompositeDuplex xmlns:cdp="http://schemas.microsoft.com/net/2006/06/duplex" />
+        <ow:OneWay xmlns:ow="http://schemas.microsoft.com/ws/2005/05/routing/policy" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CWHostService" />
+      <xsd:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISHost_Ping_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_s_GetAllClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:s_GetAllClients" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_s_GetAllClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:s_GetAllClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_s_ExecuteText_InputMessage">
+    <wsdl:part name="parameters" element="tns:s_ExecuteText" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_s_CalculateHI_InSQL_InputMessage">
+    <wsdl:part name="parameters" element="tns:s_CalculateHI_InSQL" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_s_Сlassification_InputMessage">
+    <wsdl:part name="parameters" element="tns:s_Сlassification" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_Join_InputMessage">
+    <wsdl:part name="parameters" element="tns:Join" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_Update_InputMessage">
+    <wsdl:part name="parameters" element="tns:Update" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_CompleteTasksParsing_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTasksParsing" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_CompleteTasksHSQRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTasksHSQRT" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_Leave_InputMessage">
+    <wsdl:part name="parameters" element="tns:Leave" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_ResultCompleteTaskParsing_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResultCompleteTaskParsing" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_ResultCompleteTaskHSQRT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResultCompleteTaskHSQRT" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_ResultMatrix_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResultMatrix" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_SetClientGuid_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:SetClientGuid" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_CrawlerJoin_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:CrawlerJoin" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_Matrix_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:Matrix" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_ClientLeave_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ClientLeave" />
+  </wsdl:message>
+  <wsdl:message name="ISHost_ExecuteText_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteText" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="ISHost">
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="Ping">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/Ping" message="tns:ISHost_Ping_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="s_GetAllClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/s_GetAllClients" message="tns:ISHost_s_GetAllClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/s_GetAllClientsResponse" message="tns:ISHost_s_GetAllClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="s_ExecuteText">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/s_ExecuteText" message="tns:ISHost_s_ExecuteText_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="s_CalculateHI_InSQL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/s_CalculateHI_InSQL" message="tns:ISHost_s_CalculateHI_InSQL_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="s_Сlassification">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/s_Сlassification" message="tns:ISHost_s_Сlassification_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Join">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/Join" message="tns:ISHost_Join_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Update">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/Update" message="tns:ISHost_Update_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="CompleteTasksParsing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/CompleteTasksParsing" message="tns:ISHost_CompleteTasksParsing_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="CompleteTasksHSQRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/CompleteTasksHSQRT" message="tns:ISHost_CompleteTasksHSQRT_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="Leave">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/Leave" message="tns:ISHost_Leave_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="ResultCompleteTaskParsing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/ResultCompleteTaskParsing" message="tns:ISHost_ResultCompleteTaskParsing_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="ResultCompleteTaskHSQRT">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/ResultCompleteTaskHSQRT" message="tns:ISHost_ResultCompleteTaskHSQRT_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="ResultMatrix">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISHost/ResultMatrix" message="tns:ISHost_ResultMatrix_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="SetClientGuid">
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/SetClientGuid" message="tns:ISHost_SetClientGuid_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="CrawlerJoin">
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/CrawlerJoin" message="tns:ISHost_CrawlerJoin_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Matrix">
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/Matrix" message="tns:ISHost_Matrix_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ClientLeave">
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/ClientLeave" message="tns:ISHost_ClientLeave_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ExecuteText">
+      <wsdl:output wsaw:Action="http://tempuri.org/ISHost/ExecuteText" message="tns:ISHost_ExecuteText_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSDualHttpBinding_ISHost" type="tns:ISHost">
+    <wsp:PolicyReference URI="#WSDualHttpBinding_ISHost_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="s_GetAllClients">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/s_GetAllClients" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="s_ExecuteText">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/s_ExecuteText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="s_CalculateHI_InSQL">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/s_CalculateHI_InSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="s_Сlassification">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/s_Сlassification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Join">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/Join" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Update">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTasksParsing">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/CompleteTasksParsing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTasksHSQRT">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/CompleteTasksHSQRT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Leave">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/Leave" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ResultCompleteTaskParsing">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/ResultCompleteTaskParsing" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ResultCompleteTaskHSQRT">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/ResultCompleteTaskHSQRT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ResultMatrix">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/ResultMatrix" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SetClientGuid">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/SetClientGuid" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrawlerJoin">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/CrawlerJoin" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Matrix">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/Matrix" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClientLeave">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/ClientLeave" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteText">
+      <soap12:operation soapAction="http://tempuri.org/ISHost/ExecuteText" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SHost">
+    <wsdl:port name="WSDualHttpBinding_ISHost" binding="tns:WSDualHttpBinding_ISHost">
+      <soap12:address location="http://10.10.9.132:20103/Host" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://10.10.9.132:20103/Host</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

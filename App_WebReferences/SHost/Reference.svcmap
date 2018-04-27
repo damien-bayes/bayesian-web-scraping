@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="01612fef-232e-42b5-8b4c-3fcc22ba4e72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.10.9.132:20103/Host" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SHost1.wsdl" MetadataType="Wsdl" ID="b1539952-12a7-476a-9685-052ebca3c17d" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?wsdl" />
+    <MetadataFile FileName="Host4.xsd" MetadataType="Schema" ID="cbc6cab4-2fc3-429c-880b-daca4feeab59" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?xsd=xsd1" />
+    <MetadataFile FileName="Host42.xsd" MetadataType="Schema" ID="7f12ded1-16e4-4aab-afbe-6af16515ce79" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?xsd=xsd2" />
+    <MetadataFile FileName="Host43.xsd" MetadataType="Schema" ID="6525a818-c539-4284-bc4b-c05d5ca377ae" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?xsd=xsd3" />
+    <MetadataFile FileName="Host44.xsd" MetadataType="Schema" ID="5d34ccac-ef81-453d-89d1-ac9fe3b5aa24" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?xsd=xsd0" />
+    <MetadataFile FileName="Host1.disco" MetadataType="Disco" ID="39e97719-79b5-4493-b197-8e31c8fdf5b6" SourceId="1" SourceUrl="http://10.10.9.132:20103/Host?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

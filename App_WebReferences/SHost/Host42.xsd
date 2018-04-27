@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/CWHostService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/CWHostService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.10.9.132:20103/Host?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:simpleType name="StateTask">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="init" />
+      <xs:enumeration value="complited" />
+      <xs:enumeration value="error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="StateTask" nillable="true" type="tns:StateTask" />
+  <xs:complexType name="ClientStruct">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IEVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="ProcessorLoadPercentage" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="VideoController" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="asyncstate" type="ser:guid" />
+      <xs:element minOccurs="0" name="internet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="memorysize" type="xs:double" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="processorcount" type="xs:int" />
+      <xs:element minOccurs="0" name="type" type="tns:DeviceType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientStruct" nillable="true" type="tns:ClientStruct" />
+  <xs:simpleType name="DeviceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PC" />
+      <xs:enumeration value="Android" />
+      <xs:enumeration value="WindowsPhone" />
+      <xs:enumeration value="IOS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DeviceType" nillable="true" type="tns:DeviceType" />
+  <xs:complexType name="HItask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aread_id" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="aread_ids" nillable="true" type="q2:ArrayOfint" />
+      <xs:element minOccurs="0" name="limit" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HItask" nillable="true" type="tns:HItask" />
+  <xs:complexType name="ArrayOfTaskClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TaskClient" nillable="true" type="tns:TaskClient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTaskClient" nillable="true" type="tns:ArrayOfTaskClient" />
+  <xs:complexType name="TaskClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Tajax" type="tns:Ajax" />
+      <xs:element minOccurs="0" name="area_id" type="xs:int" />
+      <xs:element minOccurs="0" name="corpus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="innerurl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="isAjax" type="xs:boolean" />
+      <xs:element minOccurs="0" name="result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="state" type="tns:StateTask" />
+      <xs:element minOccurs="0" name="taskid" type="xs:int" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TaskClient" nillable="true" type="tns:TaskClient" />
+  <xs:complexType name="Ajax">
+    <xs:annotation>
+      <xs:appinfo>
+        <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="area_id" type="xs:int" />
+      <xs:element minOccurs="0" name="count" type="xs:int" />
+      <xs:element minOccurs="0" name="element" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elementID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="elementText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="removeresult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="xpath" nillable="true" type="q3:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ajax" nillable="true" type="tns:Ajax" />
+</xs:schema>
