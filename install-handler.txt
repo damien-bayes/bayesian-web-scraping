@@ -1,0 +1,2 @@
+cd c:\windows\Microsoft.Net\Framework\v3.0\Windows Communication Foundation
+ServiceModelReg -i
