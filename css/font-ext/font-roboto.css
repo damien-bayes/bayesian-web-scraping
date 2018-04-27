@@ -1,0 +1,34 @@
+﻿@font-face {
+    font-family: "RobotoRegular";
+    src: url("../../../fonts/cube-crawler-supervisor-fonts/roboto/default/Roboto-Regular.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("../../../fonts/cube-crawler-supervisor-fonts/roboto/default/Roboto-Light.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("../../../fonts/cube-crawler-supervisor-fonts/roboto/default/Roboto-Medium.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RobotoBold";
+    src: url("../../../fonts/cube-crawler-supervisor-fonts/roboto/default/Roboto-Bold.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "RobotoItalic";
+    src: url("../../../fonts/cube-crawler-supervisor-fonts/roboto/default/Roboto-Italic.ttf");
+    font-style: normal;
+    font-weight: normal;
+}

@@ -1,0 +1,22 @@
+﻿.loginBtn {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.input-indent {
+    padding: 8px;
+}
+
+.label-indent {
+    padding: 10px;
+}
+
+.logo {
+    width: 256px; 
+    display: block; 
+    margin: 0px auto;
+}
+
+.top-indent {
+    padding-top: 14px;
+}

@@ -1,0 +1,279 @@
+﻿/*
+    Supervisor CSS is written by Damien Bayes. All Rights Reserved. 2015 Inc.
+    Copyright 2015 Cube Crawler, Inc.
+    Email: damien_laboratories@live.com
+
+    Ext: {
+        https://www.google.com/tagmanager/
+        http://unsemantic.com/
+        http://getbootstrap.com/2.3.2/
+        https://github.com/twitter/typeahead.js
+        http://git.io/
+        http://scobo.github.io/lodestone/
+        http://fortawesome.github.io/Font-Awesome/
+        http://fezvrasta.github.io/bootstrap-material-design/bootstrap-elements.html
+    }
+ */
+
+/* Sidebar - Begin */
+.sidebar {
+    display: table-cell;
+    vertical-align: top;
+}
+/* Sidebar - End */
+
+/* Structure - Begin */
+.header-content {
+    position: relative;
+    padding: 16px;
+    width: 100%;
+    font-family: inherit;
+}
+
+.header-content .primary-header {
+    height: 28px;
+}
+
+.header-content .secondary-header {
+    height: 48px;
+}
+
+.header-content .secondary-header h1,
+.header-content .secondary-header p {
+    margin: 0;
+    padding: 0;
+}
+
+.header-content .hamburger {
+    padding: 4px;
+}
+
+.header-content .header-right-align {
+    float: right;
+}
+
+.header-content .header-right-align::after {
+    clear: right;
+}
+
+.header-content h1 {
+    text-transform: uppercase;
+}
+
+.header-content .secondary-header {
+    padding-left: 72px;
+}
+
+.header-content .header-right-align ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-content .header-right-align ul > li {
+    display: inline-block;
+    padding: 4px;
+}
+
+.content-stationing {
+    position: fixed;
+    top: 108px;
+    bottom: 32px;
+    overflow: auto;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+.footer-content {
+    position: fixed;
+    width: 100%;
+    bottom: 6px;
+    text-align: right;
+}
+.footer-content span {
+    font-size: 80%;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+/* Structure - End */
+
+/* Hamburger Toggle - Begin */
+.hamburger-toggle {
+    display: inline-block;
+    padding: 4px 0;
+    width: 26px;
+    height: 26px;
+}
+
+.hamburger-icon {
+    display: block;
+    margin: 10px 1px;
+    width: 22px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+
+.hamburger-icon:before {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: #fff;
+    bottom: 6px;
+    width: 22px;
+    height: 2px;
+}
+
+.hamburger-icon:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: #fff;
+    top: 6px;
+    width: 22px;
+    height: 2px;
+}
+
+.hamburger-icon.hamburger-transitioning {
+    -webkit-animation: rotate 0.3s ease-in-out;
+}
+
+.hamburger-icon.hamburger-transitioning:before {
+    -webkit-animation: rotate-top 0.3s ease-in-out;
+}
+
+.hamburger-icon.hamburger-transitioning:after {
+    -webkit-animation: rotate-bottom 0.3s ease-in-out;
+}
+
+.hamburger-icon.hamburger-active {
+    -webkit-transform: rotate(180deg);
+    width: 18px;
+    margin-left: 4px;
+}
+
+.hamburger-icon.hamburger-active:before {
+    -webkit-transform: rotate(45deg);
+    width: 13px;
+    margin-left: 9px;
+    bottom: 4px;
+}
+
+.hamburger-icon.hamburger-active:after {
+    -webkit-transform: rotate(-45deg);
+    width: 13px;
+    margin-left: 9px;
+    top: 4px;
+}
+
+.hamburger-icon.hamburger-active.hamburger-transitioning {
+    -webkit-animation: rotate-back 0.3s ease-in-out;
+}
+
+.hamburger-icon.hamburger-active.hamburger-transitioning:before {
+    -webkit-animation: rotate-top-back 0.3s ease-in-out;
+}
+
+.hamburger-icon.hamburger-active.hamburger-transitioning:after {
+    -webkit-animation: rotate-bottom-back 0.3s ease-in-out;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+        width: 18px;
+        margin-left: 4px;
+    }
+}
+
+@-webkit-keyframes rotate-back {
+  from {
+    width: 18px;
+  	margin-left: 4px;
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    width: 22px;
+    margin-left: 1px;
+  }
+}
+
+@-webkit-keyframes rotate-top {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+    width: 13px;
+    margin-left: 9px;
+    bottom: 4px;
+  }
+}
+
+@-webkit-keyframes rotate-top-back {
+  from {
+    width: 13px;
+    margin-left: 9px;
+    bottom: 4px;
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+  	width: 22px;
+    bottom: 6px;
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes rotate-bottom {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-45deg);
+    width: 13px;
+    margin-left: 9px;
+    top: 4px;
+  }
+}
+
+@-webkit-keyframes rotate-bottom-back {
+  from {
+    width: 13px;
+    margin-left: 9px;
+    top: 4px;
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+    width: 22px;
+    margin-left: 0;
+    top: 6px;
+  }
+}
+/* Hamburger Toggle - End */
+
+/* View - Begin */
+.header-content .header-right-align ul > li a {
+    color: #fff;   
+}
+
+.content-primary-color {
+    background-color: #fff;
+}
+
+.header-content h1 {
+    color: #fff;
+}
+
+.header-content p {
+    color: #fff;
+}
+
+.header-content.header-primary {
+    background-color: #009688;
+    color: #fff;
+}
+/* View - End */
